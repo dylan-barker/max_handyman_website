@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book an Appointment - Max's Handyman Services</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Book an Appointment with Max</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="appointment.html">Book Appointment</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Schedule an Appointment</h2>
+            <form action="php/save_appointment.php" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="service">Select Service:</label>
+                <select id="service" name="service" required>
+                    <option value="Plumbing">Plumbing</option>
+                    <option value="Electrical Work">Electrical Work</option>
+                    <option value="Furniture Assembly">Furniture Assembly</option>
+                    <option value="Painting and Drywall Repair">Painting and Drywall Repair</option>
+                    <option value="Home Repairs">Home Repairs</option>
+                </select>
+
+                <label for="appointment_date">Appointment Date:</label>
+                <input type="date" id="appointment_date" name="appointment_date" required>
+
+                <label for="message">Additional Message (optional):</label>
+                <textarea id="message" name="message"></textarea>
+
+                <button type="submit">Submit Appointment</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>Contact us to book a reliable handyman service!</p>
+    </footer>
+</body>
+</html>
